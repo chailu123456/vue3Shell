@@ -26,13 +26,14 @@
       "scripthost"
     ]
   },
+  "mudoule": "commonjs",
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-, "src/utils/shell.js"  ],
+, "src/utils/shell.ts"  ],
   "exclude": [
     "node_modules"
   ]
