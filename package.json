@@ -2,13 +2,13 @@
   "name": "vue3-2",
   "version": "0.1.01",
   "private": true,
-  "type": "module",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "dev": "vite",
-    "shell": "ts-node ./src/utils/shell"
+    "test": "ts-node test",
+    "shell": "ts-node ./src/utils/index.ts"
   },
   "dependencies": {
     "vue": "^3.0.0"
