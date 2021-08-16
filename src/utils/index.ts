@@ -4,7 +4,7 @@ import shell from "shelljs";
 const commit = process.argv.splice(2);
 let describe = "update";
 if(commit.length) {
-  describe = commit.join('')
+  describe = commit.join('');
 }
 
 if(describe.indexOf('build') != -1 ) {
