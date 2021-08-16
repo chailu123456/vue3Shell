@@ -25,5 +25,25 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 目录
+```
+|-- undefined
+    |-- .gitignore
+    |-- index.html
+    |-- main.ts
+    |-- package-lock.json
+    |-- package.json
+    |-- README.md
+    |-- tsconfig.json
+    |-- vite.config.js
+    |-- public
+    |   |-- favicon.ico
+    |   |-- index.html
+    |-- src
+        |-- App.vue
+        |-- shims-vue.d.ts
+        |-- assets
+        |   |-- logo.png
+        |-- components
+            |-- HelloWorld.vue
+```
