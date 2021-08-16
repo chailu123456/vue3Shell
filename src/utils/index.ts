@@ -18,5 +18,5 @@ shell.exec(`git commit -m "${describe}"`)
 
 shell.exec(`git pull`)
 console.log(colors.green('正在推送~~~~'));
-shell.exec('git push')
+shell.exec('git push origin test')
 console.log(colors.green('推送成功'));
