@@ -20,9 +20,9 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
+### 快速推送代码
 ```
-npm run lint
+npm run shell 你的commit说明
 ```
 
 ### 目录
