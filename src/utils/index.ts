@@ -10,6 +10,6 @@ if(commit.length) {
 shell.exec('git add .')
 shell.exec(`git commit -m "${describe}"`)
 shell.exec(`git pull`)
-console.log(colors.green('正在推送'));
+console.log(colors.green('正在推送~~~~'));
 shell.exec('git push')
 console.log(colors.green('推送成功'));
