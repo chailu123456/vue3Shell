@@ -27,7 +27,6 @@ npm run lint
 
 ### 目录
 ```
-|-- undefined
     |-- .gitignore
     |-- index.html
     |-- main.ts
