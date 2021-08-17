@@ -11,8 +11,8 @@ const run = async () => {
   let currentBranch = '';
   if(describe.indexOf('build') != -1 ) {
     console.log(colors.green('项目打包中，请稍等片刻~~~'));
+    const a = await shell.exec(`npm run build`)
     try {
-      const a = await shell.exec(`npm run build`)
       console.log(colors.green('打包成功'));
     } catch(error) {
       console.log(colors.red(`打包失败${error.message}`));
