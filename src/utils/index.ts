@@ -16,6 +16,7 @@ const run = async () => {
       console.log(colors.green('打包成功'));
     } catch(error) {
       console.log(colors.red(`打包失败${error.message}`));
+      process.exit(1)
     }
   }
   try {
