@@ -16,8 +16,8 @@ if(describe.indexOf('build') != -1 ) {
 
 // console.log(shell.exec('git rev-parse --abbrev-ref HEAD'))
 // console.log(shell.exec('git symbolic-ref --short -q HEAD'))
-const f = shell.exec('git symbolic-ref --short -q HEAD');
-console.log(f);
+const f = shell.exec('git symbolic-ref --short -q HEAD'); // 获取当前分支
+
 shell.exec('git add .');
 shell.exec(`git commit -m "${describe}"`);
 
