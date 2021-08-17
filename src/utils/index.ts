@@ -13,10 +13,15 @@ if(describe.indexOf('build') != -1 ) {
   console.log(colors.green('打包成功'));
 }
 
-shell.exec('git add .')
-shell.exec(`git commit -m "${describe}"`)
 
-shell.exec(`git pull`)
+// console.log(shell.exec('git rev-parse --abbrev-ref HEAD'))
+// console.log(shell.exec('git symbolic-ref --short -q HEAD'))
+const f = shell.exec('git symbolic-ref --short -q HEAD');
+console.log(f);
+shell.exec('git add .');
+shell.exec(`git commit -m "${describe}"`);
+
+shell.exec(`git pull origin ${f}`);
 console.log(colors.green('正在推送~~~~'));
-shell.exec('git push origin test')
+shell.exec(`git push origin ${f}`);
 console.log(colors.green('推送成功'));
