@@ -10,9 +10,13 @@ if(commit.length) {
 const run = async () => {
   let currentBranch = '';
   if(describe.indexOf('build') != -1 ) {
-    console.log(colors.green('打包中~~~'));
-    shell.exec(`npm run viteBuild`)
-    console.log(colors.green('打包成功'));
+    console.log(colors.green('项目打包中，请稍等片刻~~~'));
+    try {
+      shell.exec(`npm run build`)
+      console.log(colors.green('打包成功'));
+    } catch(error) {
+      console.log(colors.red(`打包失败${error.message}`));
+    }
   }
   try {
      const { stdout } = await shell.exec('git symbolic-ref --short -q HEAD'); // 获取当前分支
@@ -28,8 +32,7 @@ const run = async () => {
 
   try {
     console.log(colors.green(`尝试推送分支 ${currentBranch} 至远程仓库`));
-    const {stderr} = shell.exec(`git push origin ${currentBranch}`);
-    console.log(colors.red(stderr))
+    shell.exec(`git push origin ${currentBranch}`);
   } catch(error) {
     console.log(colors.red(`推送分支失败: ${error.message}`))
     process.exit(1)
