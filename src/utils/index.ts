@@ -27,9 +27,9 @@ const run = async () => {
   shell.exec(`git commit -m "${describe}"`);
 
   try {
-    console.log(`尝试推送分支 ${currentBranch} 至远程仓库`);
+    console.log(colors.green(`尝试推送分支 ${currentBranch} 至远程仓库`));
     const {stderr} = shell.exec(`git push origin ${currentBranch}`);
-    console.log(stderr)
+    console.log(colors.red(stderr))
   } catch(error) {
     console.log(colors.red(`推送分支失败: ${error.message}`))
     process.exit(1)
