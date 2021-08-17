@@ -11,15 +11,48 @@ const run = async () => {
   let currentBranch = '';
   if(describe.indexOf('build') != -1 ) {
     console.log(colors.green('项目打包中，请稍等片刻~~~'));
-    try {
-      await shell.exec(`npm run build`)
+
+    new Promise((resolve,reject) => {
+      console.log(2)
+      const status = shell.exec(`npm run build`); // 打包失败不走catch
+      if(status.indexOf('failed')) {
+        reject('打包失败')
+      } else {
+        resolve('打包成功')
+      }
+    }).then(res => {
       console.log(colors.green('打包成功'));
-    } catch(error) {
-      console.log(222)
-      console.log(colors.red(`打包失败${error.message}`));
+    }).catch(err => {
+      console.log(colors.red(err));
       process.exit(1)
-    }
+    })
+
+    // try {
+    //   await new Promise((resolve,reject) => {
+    //     shell.exec(`npm run build`)
+    //     console.log(colors.green('打包成功'));
+    //   }).then(res => {
+
+    //   }).catch(err => {
+
+    //   })
+    // } catch(error) {
+    //   console.log(222)
+    //   console.log(colors.red(`打包失败${error.message}`));
+    //   process.exit(1)
+    // }
   }
+
+  new Promise((resolve,reject)=> {
+    const { stdout } = shell.exec('git symbolic-ref --short -q HEAD'); // 获取当前分支
+     currentBranch = stdout;
+     console.log(colors.green(`当前分支为${currentBranch}`))
+     if(stdout) {
+      resolve('成功')
+     } else {
+      reject('失败')
+     }
+  })
   try {
      const { stdout } = await shell.exec('git symbolic-ref --short -q HEAD'); // 获取当前分支
      currentBranch = stdout;
