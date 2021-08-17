@@ -2,7 +2,7 @@
 import colors from "colors";
 import shell from "shelljs";
 const commit = process.argv.splice(2);
-let describe = "update";
+let describe = "update"; // commit信息
 if(commit.length) {
   describe = commit.join('');
 }
@@ -12,16 +12,12 @@ if(describe.indexOf('build') != -1 ) {
   shell.exec(`npm run viteBuild`)
   console.log(colors.green('打包成功'));
 }
-
-
-// console.log(shell.exec('git rev-parse --abbrev-ref HEAD'))
-// console.log(shell.exec('git symbolic-ref --short -q HEAD'))
-const f = shell.exec('git symbolic-ref --short -q HEAD'); // 获取当前分支
+const currentBranch = shell.exec('git symbolic-ref --short -q HEAD'); // 获取当前分支
 
 shell.exec('git add .');
 shell.exec(`git commit -m "${describe}"`);
 
-shell.exec(`git pull origin ${f}`);
+shell.exec(`git pull origin ${currentBranch}`);
 console.log(colors.green('正在推送~~~~'));
-shell.exec(`git push origin ${f}`);
+shell.exec(`git push origin ${currentBranch}`);
 console.log(colors.green('推送成功'));
