@@ -54,11 +54,10 @@ const run = async () => {
       if(!code) {
         console.log(colors.green(`${currentBranch} 分支推送成功`));
       } else {
-        console.log(colors.red(`${currentBranch} 分支推送失败`));
-        process.exit(1)
+        throw "为空";
       }
     } catch(error) {
-      console.log(colors.red(`推送分支失败ss: ${error.message}`))
+      console.log(colors.red(`推送分支失败: ${error.message}`))
       process.exit(1)
     }
   }
