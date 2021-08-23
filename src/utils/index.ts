@@ -13,7 +13,6 @@ const run = async () => {
     console.log(colors.green('项目打包中，请稍等片刻~~~'));
     buildParmas = new Promise((resolve,reject) => {
       const {code} = shell.exec(`npm run viteBuild`); // 打包失败不走catch
-      console.log(code)
       // code = 0 成功
       if(code) {
         reject('打包失败')
@@ -56,8 +55,8 @@ const run = async () => {
   } else {
     pushCode()
   }
-
 }
 
 run()
+
 
