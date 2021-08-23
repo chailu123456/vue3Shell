@@ -49,7 +49,7 @@ const run = async () => {
     shell.exec(`git commit -m "${describe}"`);
     try {
       console.log(colors.green(`尝试推送分支 ${currentBranch} 至远程仓库`));
-      const status = shell.exec(`git push origin ccc`);
+      const status = shell.exec(`git push origin ${currentBranch}`);
       console.log(status)
       if(status.indexOf('error')) {
         console.log(colors.green(`${currentBranch} 分支推送成功`));
