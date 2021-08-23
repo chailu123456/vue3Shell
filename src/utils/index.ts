@@ -49,12 +49,13 @@ const run = async () => {
     shell.exec(`git commit -m "${describe}"`);
     try {
       console.log(colors.green(`尝试推送分支 ${currentBranch} 至远程仓库`));
-      const status = shell.exec(`git push origin ${currentBranch}`);
-      console.log(status)
-      if(status.indexOf('error')) {
+      const { code } = shell.exec(`git push origin ${currentBranch}`);
+      console.log(code)
+      if(!code) {
         console.log(colors.green(`${currentBranch} 分支推送成功`));
       } else {
         console.log(colors.red(`${currentBranch} 分支推送失败`));
+        process.exit(1)
       }
     } catch(error) {
       console.log(colors.red(`推送分支失败ss: ${error.message}`))
