@@ -57,7 +57,7 @@ const run = async () => {
         throw "为空";
       }
     } catch(error) {
-      console.log(colors.red(`推送分支失败: ${error.message}`))
+      console.log(colors.red(`推送分支失败: ${error}`))
       process.exit(1)
     }
   }
