@@ -12,7 +12,7 @@ const run = async () => {
   if(describe.indexOf('build') != -1 ) {
     console.log(colors.green('项目打包中，请稍等片刻~~~'));
     buildParmas = new Promise((resolve,reject) => {
-      const {code} = shell.exec(`npm run viteBuild`); // 打包失败不走catch
+      const {code} = shell.exec(`npm run build`); // 打包失败不走catch
       // code = 0 成功
       if(code) {
         reject('打包失败')
@@ -41,8 +41,7 @@ const run = async () => {
         throw "";
       }
     } catch(error) {
-      console.log(colors.red(`推送分支失败: ${error}`))
-      process.exit(1)
+      return console.log(colors.red(`推送分支失败: ${error}`))
     }
   }
   if (buildParmas) {
@@ -50,8 +49,8 @@ const run = async () => {
       console.log(colors.green('打包成功'));
       pushCode();
     }).catch(err => {
-      console.log(colors.red(err));
-    })
+      return console.log(colors.red(err));
+    }) 
   } else {
     pushCode()
   }
