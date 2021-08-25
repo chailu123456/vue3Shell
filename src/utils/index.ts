@@ -24,9 +24,8 @@ const run = async () => {
  
   // 获取当前分支
   const { stdout } = shell.exec('git symbolic-ref --short -q HEAD');
-  console.log(stdout)
   currentBranch = stdout;
-  console.log(colors.green(`当前分支为${currentBranch}`))
+  console.log(colors.green(`当前分支为 ${currentBranch}`))
   
   // 代码推送
   const pushCode = () => {
