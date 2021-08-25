@@ -2,7 +2,7 @@
 
 ## Project main
 ```
-使用node进行git操作，运行npm run shell,进行一系列git add,git commit,git push 快速推送
+使用node进行git操作，运行npm run shell,进行一系列git add,git commit,git push 快速推送代码
 ```
 
 ## Project setup
