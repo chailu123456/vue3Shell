@@ -2,8 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <h1>使用命令进行操作git</h1>
   <h1>使用命令进行操作git</h1>
-  <h1>使用命令进行操作git</h1>
-  <h1>使用命令进行操作git</h1>
+
   <HelloWorld msg="使用vite启动webpack构建的项目"/>
 </template>
 
