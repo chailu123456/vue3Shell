@@ -1,8 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <h1>使用shell命令进行操作git,远程推送代码</h1>
-  <h1>使用shell命令进行操作git,远程推送代码</h1>
-  <h1>使用shell命令进行操作git,远程推送代码</h1>
+
   <h1>使用shell命令进行操作git,远程推送代码</h1>
   <h1>使用shell命令进行操作git,远程推送代码</h1>
   <h1>使用shell命令进行操作git,远程推送代码</h1>
