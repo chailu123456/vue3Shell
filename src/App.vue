@@ -2,6 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <h1>使用shell命令进行操作git,远程推送代码</h1>
   <h2>添加提示</h2>
+  <h2>添加提示</h2>
 
   <HelloWorld msg="使用vite启动webpack构建的项目"/>
 </template>
