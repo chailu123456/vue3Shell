@@ -2,12 +2,6 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="使用shell命令进行操作git,远程推送代码"/>
 
-
-  <HelloWorld msg="使用shell命令进行操作git,远程推送代码"/>
-
-
-  <HelloWorld msg="使用shell命令进行操作git,远程推送代码"/>
-  <HelloWorld msg="使用shell命令进行操作git,远程推送代码"/>
   <HelloWorld msg="使用shell命令进行操作git,远程推送代码"/>
 
 
