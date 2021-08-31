@@ -4,7 +4,7 @@
 
   <HelloWorld msg="使用shell命令进行操作git,远程推送代码"/>
   <h3>{{a}}</h3>
-  <button @click="btn">点击</button>
+  <button @click="btn">+1</button>
 
 </template>
 
