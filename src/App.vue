@@ -2,25 +2,23 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="使用shell命令进行操作git,远程推送代码"/>
 
-  <HelloWorld msg="使用shell命令进行操作git,远程推送代码"/>
-
-  <h3>{{a}}</h3>
-
-
+  <HelloWorld msg="测试"/>
+  <Test></Test>
 
   <button @click="btn">+1</button>
-
 
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from './components/HelloWorld';
+import Test from './components/test.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Test
   }
 });
 </script>

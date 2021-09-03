@@ -1,18 +1,16 @@
 // vite.config.js
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-
+import vueJsx from "@vitejs/plugin-vue-jsx";
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
-  configurations: [
-    {
-      "type": "pwa-chrome",
-      "request": "launch",
-      "name": "Launch Chrome against localhost",
-      "url": "http://localhost:8080",
-      "webRoot": "${workspaceFolder}"
-    }
-  ]
-  
+  resolve: {
+    extensions: ['.mjs', '.js', '.ts','.vue', '.jsx', '.tsx', '.json']
+  },
+  plugins: [vue(),vueJsx()],
+  module: {
+    rules: [
+      { test: /\.tsx$/, loader: 'ts-loader'}
+    ]
+  }
 })
