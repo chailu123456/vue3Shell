@@ -2,7 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="使用shell命令进行操作git,远程推送代码"/>
 
-  <HelloWorld msg="测试"/>
+  <HelloWorld msg="测试1"/>
   <Test></Test>
 
   <button @click="btn">+1</button>
@@ -26,8 +26,6 @@ export default defineComponent({
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
