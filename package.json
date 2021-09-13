@@ -2,6 +2,7 @@
   "name": "vue3-2",
   "version": "0.1.01",
   "private": true,
+  "type": "module",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
