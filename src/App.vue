@@ -7,6 +7,9 @@
 
   <button @click="btn">+1</button>
 
+
+
+
 </template>
 
 <script lang="ts">
