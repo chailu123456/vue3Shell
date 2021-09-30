@@ -3,6 +3,7 @@
   <HelloWorld msg="使用shell命令进行操作git,远程推送代码"/>
 
   <HelloWorld msg="测试1"/>
+  <HelloWorld msg="测试1"/>
   <Test></Test>
 
   <button @click="btn">+1</button>
