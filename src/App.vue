@@ -2,6 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
 
   <HelloWorld msg="使用shell命令进行操作git远程推送代码"/>
+
 </template>
 
 <script lang="ts">
