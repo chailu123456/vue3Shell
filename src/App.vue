@@ -8,7 +8,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 // import HelloWorld from './components/HelloWorld';
-import Test from './components/test.vue';
+// import Test from './components/test.vue';
 
 export default defineComponent({
   name: 'App',
